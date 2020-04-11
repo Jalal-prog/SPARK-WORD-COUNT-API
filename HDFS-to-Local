@@ -1,0 +1,14 @@
+// After starting the SPARK SHELL for SCALA.
+// Below is the API for word count in SCALA-SPARK through loading a data file from local path and saving into HDFS path.
+
+scala>  //cutting off 'scala>' for the below codes for easy copy.
+       val lines = sc.textFile(“local-path”)
+       val wordCounts = lines.flatMap {line => line.split(" ")}
+       .map(word => (word, 1))
+       .reduceByKey(_ + _)
+       wordCounts.saveAsTextFile(“HDFS-path”)   // untill this the code is executed
+       wordCounts.foreach(println)              // if you want to see print the result in the screen.   
+       
+       
+       
+// Similarly we can change the local path to HDFS path and vice versa, also use the AMAZON s3 path.    
