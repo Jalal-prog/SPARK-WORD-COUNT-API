@@ -1,5 +1,5 @@
 // After starting the SPARK SHELL for SCALA ($ spark-shell)
-// Below is the API for word count in SPARK CONTEXT through loading a data file from local path and saving into HDFS path.
+// Below is the API for word count in SPARK CONTEXT through loading a data file from one HDFS path and saving into another HDFS path.
 
 scala>  //cutting off 'scala>' for the below codes for easy copy.
        val lines = sc.textFile(“HDFS-PATH”)
