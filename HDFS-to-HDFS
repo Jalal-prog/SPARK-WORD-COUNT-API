@@ -2,9 +2,9 @@
 // Below is the API for word count in SPARK CONTEXT through loading a data file from one HDFS path and saving into another HDFS path.
 
 scala>  //cutting off 'scala>' for the below codes for easy copy.
-       val lines = sc.textFile(“HDFS-PATH”)
+       val lines = sc.textFile("hdfs://localhost:8020/PATH")
        val wordCounts = lines.flatMap {line => line.split(" ")}
        .map(word => (word, 1))
        .reduceByKey(_ + _)
-       wordCounts.saveAsTextFile(“Another-HDFS-path”)   // untill this the code is executed
+       wordCounts.saveAsTextFile(“Another-HDFS-path”)   // untill this, the code is executed
 wordCounts.foreach(println) // if you want to see print the result in the screen. 
