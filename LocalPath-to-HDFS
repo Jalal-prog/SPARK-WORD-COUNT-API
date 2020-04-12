@@ -6,7 +6,7 @@ scala>  //cutting off 'scala>' for the below codes for easy copy.
        val wordCounts = lines.flatMap {line => line.split(" ")}
        .map(word => (word, 1))
        .reduceByKey(_ + _)
-       wordCounts.saveAsTextFile(“HDFS-path”)   // untill this the code is executed
+       wordCounts.saveAsTextFile("hdfs://localhost:8020/PATH")   // untill this, the code is executed
        wordCounts.foreach(println)              // if you want to see print the result in the screen.   
        
        
