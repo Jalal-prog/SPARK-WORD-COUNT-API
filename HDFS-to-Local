@@ -11,4 +11,4 @@ scala>  //cutting off 'scala>' for the below codes for easy copy.
        
        
        
-// Similarly we can change the local path to HDFS path and vice versa, also use the AMAZON s3 path.    
+// Similarly we can change the local path to HDFS path and vice versa, also use the AMAZON s3 path.
